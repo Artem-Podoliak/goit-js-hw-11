@@ -104,11 +104,11 @@ function resetMarkup() {
 }
 
 function showLoadMoreBtnEl() {
-    refs.loadMoreBtnEl.classList.add('hiden')
+    refs.loadMoreBtnEl.classList.remove('hiden')
 }
 
 function hideLoadMoreBtnEl() {
-    refs.loadMoreBtnEl.classList.remove('hiden')
+    refs.loadMoreBtnEl.classList.add('hiden')
 }
 
 function makeSmoothScroll() {
