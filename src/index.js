@@ -1,7 +1,7 @@
 import simpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 import SearchImg from './js/apiSearch';
-import './css/styles.css'
+import './css/styles.css'// 
 
 const refs = {
   formEl: document.querySelector('.search-form'),
