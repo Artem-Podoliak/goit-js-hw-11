@@ -32,7 +32,7 @@ async function onSearch(e) {
     const imgDataColection = await seargImg.fetchImg();
 
     renderGallery(imgDataColection);
-
+    
     if (imgDataColection.hits.length < imgDataColection.totalHits) {
       showLoadMoreBtnEl()
     }
@@ -42,9 +42,10 @@ async function onSearch(e) {
 async function onLoadMore() {
   const nextImgDataColection = await seargImg.fetchImg();
   renderGallery(nextImgDataColection);
-
+  
+  
   if ((seargImg.page - 1) * 40 >= nextImgDataColection.totalHits) {
-    hideLoadMoreBtnEl()
+    hideLoadMoreBtnEl() 
   }
 }
 
@@ -61,7 +62,9 @@ function renderGallery(data) {
         downloads,
       }) => `<div class="photo-card">
     <a class="photo-card__item" href="${largeImageURL}">
-      <img src="${webformatURL}" alt="${tags}" loading="lazy" width="320px" />
+    <div class="photo-card__tumb">
+    <img class="photo-card__img" src="${webformatURL}" alt="${tags}" loading="lazy" />
+  </div>
     <div class="info">
       <p class="info-item">
       <b class="info-item__param">Likes</b>
@@ -90,6 +93,7 @@ function renderGallery(data) {
   lightbox.refresh();
 
   makeSmoothScroll()
+  
 }
 
 function resetMarkup() {
@@ -100,11 +104,11 @@ function resetMarkup() {
 }
 
 function showLoadMoreBtnEl() {
-    refs.loadMoreBtnEl.classList.add('hidden')
+    refs.loadMoreBtnEl.classList.add('hiden')
 }
 
 function hideLoadMoreBtnEl() {
-    refs.loadMoreBtnEl.classList.remove('hidden')
+    refs.loadMoreBtnEl.classList.remove('hiden')
 }
 
 function makeSmoothScroll() {
