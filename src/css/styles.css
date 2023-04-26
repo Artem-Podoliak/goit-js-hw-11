@@ -3,25 +3,63 @@ body {
   max-width: 1200px;
   margin-right: auto;
   margin-left: auto;
+  background-color: #f8adad;
 }
 
-.search-form {
+.form-wraper {
   display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-  background-color: #5342e9;
+  align-content: center;
+  background-color: rgba(125, 112, 235, 0.658);
   padding: 20px;
+  margin-bottom: 20px;
   border: 1px solid;
   border-radius: 6px;
   border-color: rgb(96, 106, 238);
   box-shadow: 0 8px 6px -6px black;
 }
 
-.submit-btn:hover {
-  box-shadow: 0 8px 6px -6px black;
-  
+.title {
+  margin: 0;
+  margin-right: 15px;
+  color: #f8adad;
 }
 
+.search-form {
+  display: flex;
+  justify-content: center;
+}
+
+.input-style {
+  background-color: #f8adad;
+  border-radius: 40px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #413b3b;
+  padding-left: 5px;
+}
+
+.btn-txt {
+  margin-right: 5px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #413b3b;
+}
+
+.submit-btn {
+  margin-left: 5px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  border-radius: 40px;
+  background-color: #f8adad;
+  cursor: pointer;
+  transition: transform, 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.submit-btn:hover {
+  box-shadow: 0 8px 6px -6px black;
+  background-color: #c58484;
+}
 
 .gallery {
   max-width: 1200px;
@@ -33,10 +71,10 @@ body {
 
 .photo-card {
   height: 100%;
-  flex-basis: calc((100% - 20px * 4) / 4);
+  width: calc((100% - 20px * 3) / 4);
   margin-right: 20px;
   margin-bottom: 20px;
-
+  background-color: #fff;
   border: 1px solid lightgray;
 }
 
@@ -78,16 +116,14 @@ body {
   text-align: center;
   display: flex;
   flex-direction: column;
-
 }
-.info-item__param{
-text-align: center;
+.info-item__param {
+  text-align: center;
   font-size: 14px;
   color: black;
-  
 }
 
-.info-item__num{
+.info-item__num {
   font-size: 14px;
   color: rgb(49, 47, 47);
 }
